@@ -1,0 +1,32 @@
+{% extends "catalog/base.html" %}
+{% block title %}Мир книг{% endblock title %}
+{% block header %}
+
+
+{% endblock header %}
+{% block content%}
+    <h3 class="text-dark">Этот сайт разработан для хранения наших выстовочных экспонатов онлайн.</h3>
+    <h5 class="text-dark">Приятного просмотра </h5>
+    <div> </div>
+<div class="row text-center text-dark lh-2">
+ <h3>Наши экспонаты</h3>
+ </div>
+ {% if num_books > 0 %}
+ <div class="row my-2">
+ {% for obj in guns %}
+ <div class="card" style="width: 20rem; height: 23rem;">
+ <img src="{{ obj.photo.url }}" class="card-img-top">
+ <div class="card-body">
+ <p class="card-text small">
+ {{obj.title}}
+ </p>
+ </div>
+ </div>
+ {% endfor %}
+ </div>
+ {% endif %}
+
+ </div>
+{% endblock content %}
+
+
